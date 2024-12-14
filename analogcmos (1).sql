@@ -1,0 +1,1 @@
+chapter_idnamedescriptionSELECT * FROM rasa.events;PRIMARYsender_idtimestampintent_nametimestampaction_nameintent_nameaction_nameix_events_sender_id
