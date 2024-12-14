@@ -1,0 +1,6 @@
+version: "3.1"
+rules:
+  - rule: Provide chapter detail
+    steps:
+      - intent: ask_chapter_detail
+      - action: action_fetch_chapter_detail

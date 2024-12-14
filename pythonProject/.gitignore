@@ -1,0 +1,8 @@
+.venv/
+.env
+__pycache__/
+.rasa/
+.DS_Store
+models/  # Bỏ qua nếu không muốn upload model
+*.pyc
+*.log

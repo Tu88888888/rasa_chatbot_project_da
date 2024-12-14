@@ -1,0 +1,62 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good bye
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: ask_detail
+  examples: |
+    - Tell me about [Chapter 2](subtopic)
+    - Explain [MOSFET Characteristics](subtopic)
+    - I want to know about [Chapter 3](subtopic)
+    - Tell me about [MOSFET](subtopic)
+    - What are the [characteristics](subtopic) of MOSFET?
+    - Explain [analog](subtopic) circuits
+
+- intent: ask_information
+  examples: |
+    - Tell me about [MOSFET](subtopic)
+    - Explain [Small-Signal Model](subtopic)
+    - What is [Threshold Voltage](subtopic)?
+    - Can you describe [Triode Mode](subtopic)?
+    - How does [Source Follower](subtopic) work?
+    - What are the [I-V Characteristics](subtopic) of MOS transistors?
+    - Give me details about [Differential Amplifiers](subtopic).
+    - What are the conditions for [Saturation Mode](subtopic)?
+    - Can you provide an example of [Common Source Amplifier](subtopic)?
+    - What is the [Frequency Response](subtopic) in analog circuits?
+    - I want to know about [Cutoff Mode](subtopic).
+    - Tell me an example of [Small-Signal Parameters](subtopic).
+    - What is the role of [Operational Amplifiers](subtopic)?
+
+
+- intent: fallback
+  examples: |
+    - Sorry, I don't understand.
+    - Could you repeat that?

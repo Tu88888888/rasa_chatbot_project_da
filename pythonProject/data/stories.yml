@@ -1,0 +1,47 @@
+version: "3.1"
+
+stories:
+  - story: user greets the bot
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: user asks for fallback information
+    steps:
+      - intent: fallback
+      - action: action_default_fallback
+
+  - story: Fetch information about a specific subtopic
+    steps:
+      - intent: ask_information
+        entities:
+          - subtopic: "MOSFET"
+      - action: action_fetch_information
+
+  - story: User asks about a specific mode of operation
+    steps:
+      - intent: ask_information
+        entities:
+          - subtopic: "Triode Mode"
+      - action: action_fetch_information
+
+  - story: Provide examples and details
+    steps:
+      - intent: ask_information
+        entities:
+          - subtopic: "Common Source Amplifier"
+      - action: action_fetch_information
+
+  - story: User asks for technical analysis
+    steps:
+      - intent: ask_information
+        entities:
+          - subtopic: "Small-Signal Model"
+      - action: action_fetch_information
+
+  - story: User inquires about a condition or characteristic
+    steps:
+      - intent: ask_information
+        entities:
+          - subtopic: "Threshold Voltage"
+      - action: action_fetch_information

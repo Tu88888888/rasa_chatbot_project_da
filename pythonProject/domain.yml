@@ -1,0 +1,39 @@
+version: "3.1"
+
+intents:
+  - greet
+  - fallback
+  - ask_information
+
+entities:
+  - subtopic
+
+slots:
+  subtopic:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: subtopic
+        role: null
+
+actions:
+  - action_fetch_chapter_detail
+  - action_ask_openai
+  - action_fetch_information
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you?"
+  utter_no_data:
+    - text: "Sorry, I couldn't find the information you requested."
+  utter_ask_subtopic:
+    - text: "Can you please specify the subtopic you want details about?"
+  utter_ask_information:
+    - text: "What specific topic or subtopic would you like to know about?"
+  utter_no_information:
+    - text: "I'm sorry, I couldn't find any information about '{subtopic}'. Please try asking about another topic."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
