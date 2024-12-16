@@ -1,4 +1,5 @@
 Cách sử dụng Project:.
+
 B1.Download thư mục pythonProject,và file db analogcmos(1) về máy.
 
 B2: Vào mục pythonProject, tại terminal nhập lệnh: cd pythonProject.
